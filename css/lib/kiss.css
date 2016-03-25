@@ -1,0 +1,250 @@
+/*
+* KISS CSS V1.0.0
+* Copyright 2016, Paul Scanlon
+* www.github.io/pauliescanlon
+*/
+
+
+/* [x] Table of contents
+––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
+1. Grid
+2. Base Styles
+3. Typography
+4. Colours
+5. Links
+6. Helpers
+7. Buttons
+8. Lists
+9. Transitions
+10. Gooogle Resizer Media Queries
+[x] */
+
+
+/* [x] 1. Grid  [x]
+––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––*/
+.spread {
+  width: 100%;
+  margin: auto;
+  float: left;
+}
+
+.limit {
+  max-width: 960px;
+  margin: auto;
+  clear:both;
+}
+
+.row{
+  clear: both;
+  padding-left: 20px;
+  padding-right: 20px;
+  text-align: center;
+}
+
+.column {
+  float: left;
+  margin: 0 2% 0 0;
+  display: block;
+}
+
+.col1         { width: 6.5%;   }
+.col2         { width: 15%;    }
+.col3         { width: 23.5%;  }
+.col4         { width: 32%;    }
+.col5         { width: 40%;    }
+.col6         { width: 49%;    }
+.col7         { width: 58%;    }
+.col8         { width: 66%;    }
+.col9         { width: 74.5%;  }
+.col10        { width: 83%;    }
+.col11        { width: 91.5%;  }
+.col12        { width: 100%;   }
+
+.col1.end,
+.col2.end,
+.col3.end,
+.col4.end,
+.col5.end,
+.col6.end,
+.col7.end,
+.col8.end,
+.col9.end,
+.col10.end,
+.col11.end,
+.col12.end
+{ margin: 0;  }
+
+/* [x] 2. Base Styles  [x]
+––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––*/
+
+*{
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+html{
+
+}
+
+body {
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+   min-width: 320px;
+}
+
+
+/* [x] 3. Typography  [x]
+––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––*/
+@import url(https://fonts.googleapis.com/css?family=Lato:800, 400,100,100italic);
+
+h1, h2, p, button, .column {
+  font-family: 'Lato', sans-serif;
+}
+
+h1, h2 { padding: 10px 10px 10px 10px; }
+p { padding: 8px 10px 8px 10px; }
+ul p{ padding: 6px 0px 0px 6px; }
+h1 { font-size: 55px; line-height: 55px; font-weight: 800; }
+h2 { font-size: 24px; line-height: 26px; font-weight: 800;}
+p {  font-size: 16px; line-height: 24px; font-weight: 400; }
+
+.bold{ font-weight: 800; }
+
+/* [x] 4. Colours  [x]
+––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––*/
+.bg-primary{ background-color: #85cccb; }
+.bg-secondary{ background-color: #ffffff;}
+.bg-tertiary{ background-color: #e55c49; }
+.text-white{ color: #ffffff; }
+.text-primary{ color: #212121;}
+.text-highlight{ color: #f4b30d; }
+.line-div{ background-color: #d7d6d5; }
+
+
+/* [x] 5. Links  [x]
+––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––*/
+a {  color: #cc5945; text-decoration: none }
+a:hover { color: #ec7a6f; }
+
+
+/* [x] 6. Helpers  [x]
+––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––*/
+.full-width { width: 100%; box-sizing: border-box; }
+.float-right { float: right; }
+.float-left { float: left; }
+.clear-fix { clear: both; }
+.padding-div{  padding:20px 0px 20px 0px; }
+.left{ text-align: left; }
+.line-div{  margin-top: 20px; margin-bottom: 20px; width: 100%; height:1px;
+}
+
+
+/* [x] 7. Buttons  [x]
+––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––*/
+
+button{
+  padding: 8px 15px 8px 15px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.button-left{
+  margin-left: 10px;
+}
+
+.solid-button{
+  background-color: #e75948;
+}
+
+.solid-button:hover {
+  background-color: #ec7a6f;
+}
+
+.ghost-button{
+  background: none;
+  /*border: 1px solid #e75948;*/
+  -webkit-box-shadow:inset 0px 0px 0px 1px #e75948;
+  -moz-box-shadow:inset 0px 0px 0px 1px #e75948;
+  box-shadow:inset 0px 0px 0px 1px #e75948;
+
+
+  color: #e75948;
+}
+
+.ghost-button:hover {
+  background: none;
+  /*border: 1px solid #ec7a6f;*/
+  -webkit-box-shadow:inset 0px 0px 0px 1px #e75948;
+  -moz-box-shadow:inset 0px 0px 0px 1px #e75948;
+  box-shadow:inset 0px 0px 0px 1px #e75948;
+  color: #ec7a6f;
+}
+
+button:focus{
+  outline: none;
+  border: none;
+}
+
+/* [x] 8. Lists  [x]
+––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––*/
+
+ul {
+  padding-left: 22px;
+  text-indent: -10px;
+  text-align: left;
+  font-size: 18px;
+  line-height: 0px;
+}
+
+.solid-button{
+
+}
+
+.ghost-bullet{
+  list-style: circle;
+}
+
+/* [x] 9. Transitions  [x]
+––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––*/
+
+.transition{
+  -webkit-transition: all 0.2s linear;
+  -moz-transition: all 0.2s linear;
+  -o-transition: all 0.2s linear;
+  transition: all 0.2s linear;
+}
+
+
+
+/* [x] 10. Gooogle Resizer Media Queries  [x]
+––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––*/
+/*
+Media queries set out in accordance with Google's Resizer tool:
+http://design.google.com/resizer/
+*/
+
+
+/* Up to 727px */
+@media (max-width: 727px) {
+
+  .col12, .col11, .col10, .col9, .col8, .col7, .col6, .col5, .col4, .col3, .col2, .col1  {
+    width: 100%;
+  }
+
+  .col1.end,
+  .col2.end,
+  .col3.end,
+  .col4.end,
+  .col5.end,
+  .col6.end,
+  .col7.end,
+  .col8.end,
+  .col9.end,
+  .col10.end,
+  .col11.end,
+  .col12.end {
+    margin-bottom: 20px;
+   }
+}
